@@ -1,0 +1,25 @@
+PAM Authentication Module for NaviServer 4.x
+Release 1.0
+vlad@crystalballinc.com
+
+This is NaviServer module that implements interface to pam library
+
+/*--------------------------------------------------------------------*/
+
+Compiling and Installing
+
+To compile this driver, you'll need to have pam installed
+
+Usage
+
+    ns_authpam auth ?-delay ms? ?-tty t? ?-rhost h? ?-authtok t? servicename username password
+
+    Return 1 if authenticated, 0 if not
+
+    -delay   - specify how long to wait in case failure, miliseconds
+    -tty     - tty if pam services requires it
+    -authtok - token to pass to pam module
+    -rhost   - remote host or IP
+
+Authors
+     Vlad Seryakov vlad@crystalballinc.com
